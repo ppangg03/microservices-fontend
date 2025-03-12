@@ -187,12 +187,12 @@ if(!search) {
               <span className="text-sm">วัน-เวลา</span>
               <div className="flex items-center gap-2 w-2/4">
               <span className="text-sm whitespace-nowrap">เงินเข้า/เงินออก </span>
-              <div className="relative w-27">
+              <div className="relative w-28">
     
     <input
       type="text"
       placeholder="ค้นหา"
-      className="w-full px-3 py-1 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="w-full px-3 py-1 pl-8 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
     <svg className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
