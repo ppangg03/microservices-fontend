@@ -17,10 +17,12 @@ export default function Statement(){
     const fetchAccounts = async  () => {
       try {
         const response = await fetch("http://192.168.56.5:8000/api/accounts/allAccount");
-        if (!response.ok) throw new Error("Failed to fetch accounts");
+        
+
+        if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
         const data = await response.json();
         setAccounts(data);
-        console.log(data);
+        console.log("✅ Data received:",data);
       } catch (error) {
         console.error("Error fetching accounts:", error);
       }
