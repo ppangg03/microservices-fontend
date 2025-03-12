@@ -136,7 +136,7 @@ if(!search) {
     }));
   };
   return (
-      <div className="flex flex-wrap justify-center gap-10 p-10">
+      <div className="flex flex-wrap justify-center gap-10 p-10 ">
   {accounts.length === 0 ? (
     <p>Loading...</p>
   ) : (
@@ -163,7 +163,7 @@ if(!search) {
       : [];
     
       return (
-        <div key={accIndex} className="w-96  p-5 rounded-lg shadow-lg">
+        <div key={accIndex} className="w-120 p-5 rounded-lg shadow-lg">
         <div className="bg-gradient-to-r from-blue-600 bg-purple-600 p-4 rounded-lg shadow">
           <h2 className="text-white text-lg font-semibold">{account.accountname}</h2>
           <p className="text-white">{account.accountid}</p>
@@ -185,14 +185,14 @@ if(!search) {
             <div className="flex justify-between font-medium mb-1">
 
               <span className="text-sm">วัน-เวลา</span>
-              <div className="flex items-center gap-2 w-3/4">
+              <div className="flex items-center gap-2 w-2/4">
               <span className="text-sm">เงินเข้า/เงินออก </span>
-              <div className="relative flex-grow max-w-xs">
+              <div className="relative w-40 max-w-xs">
     
     <input
       type="text"
       placeholder="ค้นหา"
-      className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
     <svg className="absolute left-2 top-2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
