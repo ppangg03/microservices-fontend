@@ -16,7 +16,7 @@ export default function Statement(){
   useEffect(() => {
     const fetchAccounts = async  () => {
       try {
-        const response = await fetch("http://kong:8000/api/accounts/allAccount");
+        const response = await fetch("http://localhost:8000/api/accounts/allAccount");
         
 
         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
@@ -34,7 +34,7 @@ export default function Statement(){
   }, []);
   const fetchTransaction = async (accountId) => {
     try {
-      const response = await fetch("http://kong:8000/api/transaction/allTransaction_logs");
+      const response = await fetch("http://localhost:8000/api/transaction/allTransaction_logs");
       if (!response.ok) throw new Error("Failed to fetch transactions");
       const data = await response.json();
       console.log("fetching transactions...:", data);
@@ -57,7 +57,7 @@ export default function Statement(){
   }, [accounts]);
   const fetchTransaction_amount = async (accountId,amount) => {
     try {
-      const response = await fetch(`http://kong:8000/api/transaction/ByAmount?amount=${amount}&Id=${accountId}` , {
+      const response = await fetch(`http://localhost:8000/api/transaction/ByAmount?amount=${amount}&Id=${accountId}` , {
         method: "GET",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -76,7 +76,7 @@ export default function Statement(){
   };
   const fetchTransactions_logs_date = async  (accountId, date) => {
     try {
-      const response = await fetch(`http://kong:8000/api/transaction/byAccountIdAndDate?Id=${accountId}&date=${date}`, {
+      const response = await fetch(`http://localhost:8000/api/transaction/byAccountIdAndDate?Id=${accountId}&date=${date}`, {
           method: "GET",
           headers: { "Content-Type": "application/json" },
           credentials: "include",
