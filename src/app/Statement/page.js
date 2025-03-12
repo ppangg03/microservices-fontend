@@ -180,19 +180,19 @@ if(!search) {
           onChange={(e) => handleDateChange(e, account.accountid)}
         />
           </div>
-        <div className="mt-3 bg-white  rounded-lg h-64 overflow-y-auto shadow">
+        <div className="mt-3 bg-white  rounded-lg h-80 overflow-y-auto shadow">
         <div className="sticky top-0 z-10 bg-white p-4 shadow-md">
             <div className="flex justify-between font-medium mb-1">
 
               <span className="text-sm">วัน-เวลา</span>
               <div className="flex items-center gap-2 w-3/4">
               <span className="text-sm">เงินเข้า/เงินออก </span>
-              <div className="relative flex-grow">
+              <div className="relative flex-grow max-w-xs">
     
     <input
       type="text"
       placeholder="ค้นหา"
-      className="p-1 pl-8 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
     <svg className="absolute left-2 top-2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
