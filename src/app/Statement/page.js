@@ -182,22 +182,28 @@ if(!search) {
           </div>
         <div className="mt-3 bg-white  rounded-lg h-80 overflow-y-auto shadow">
         <div className="sticky top-0 z-10 bg-white p-4 shadow-md">
-            <div className="flex justify-between font-medium mb-1">
+            <div className="flex items-center justify-between w-full p-2 bg-gray-100 rounded-md">
 
-              <span className="text-sm">วัน-เวลา</span>
-              <div className="flex items-center gap-1 w-1/4">
+              <label className="text-sm">วัน-เวลา</label>
+
+              <div className="flex items-center gap-2">
               <span className="text-sm whitespace-nowrap">เงินเข้า/เงินออก </span>
-              <div className="relative w-40">
-    
+              <div className="flex items-center border border-gray-400 rounded-full px-2 py-1 w-[60px]">
+
+              <svg 
+        className="w-3 h-3 text-gray-500 flex-shrink-0"
+        fill="none" stroke="currentColor" strokeWidth="2"
+        viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+      >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 1110.5 4a6.5 6.5 0 016.5 6.5z"></path>
+      </svg>
     <input
       type="text"
       placeholder="จำนวนเงิน"
-      className="w-full px-3 py-4 pl-8 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      className="w-full text-xs outline-none min-w-0 bg-transparent"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
-    <svg className="absolute left-2 top-1/2 transform -translate-y-1/2 w-3 h-3 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 1110.5 4a6.5 6.5 0 016.5 6.5z"></path>
-    </svg>
+    
   </div>
   </div>
               
