@@ -185,7 +185,7 @@ if(!search) {
             <div className="flex justify-between font-medium mb-1">
 
               <span className="text-sm">วัน-เวลา</span>
-              <div className="flex items-center gap-4">
+              <div className="flex flex-grow justify-end items-center gap-2">
               <span className="text-sm">เงินเข้า/เงินออก </span>
               <div className="relative w-1/4">
     
