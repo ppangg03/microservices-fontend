@@ -185,17 +185,17 @@ if(!search) {
             <div className="flex justify-between font-medium mb-1">
 
               <span className="text-sm">วัน-เวลา</span>
-              <div className="flex items-center gap-2 w-2/4">
+              <div className="flex items-center gap-1 w-1/4">
               <span className="text-sm whitespace-nowrap">เงินเข้า/เงินออก </span>
               <div className="relative w-40">
     
     <input
       type="text"
-      placeholder="ค้นหา"
-      className="w-full px-3 py-2 pl-8 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+      placeholder="จำนวนเงิน"
+      className="w-full px-3 py-4 pl-8 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
-    <svg className="absolute left-2 top-1/2 transform -translate-y-1/2 w-2 h-2 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg className="absolute left-2 top-1/2 transform -translate-y-1/2 w-3 h-3 text-gray-500" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35M17 10.5A6.5 6.5 0 1110.5 4a6.5 6.5 0 016.5 6.5z"></path>
     </svg>
   </div>
