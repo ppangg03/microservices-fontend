@@ -198,7 +198,7 @@ if(!search) {
       </svg>
     <input
       type="text"
-      placeholder="จำนวนเงิน"
+      placeholder="ค้นหา"
       className="w-[40px] text-xs outline-none bg-transparent"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
