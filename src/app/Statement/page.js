@@ -163,7 +163,7 @@ if(!search) {
       : [];
     
       return (
-        <div key={accIndex} className="w-120 p-5 rounded-lg shadow-lg">
+        <div key={accIndex} className="w-full max-w-96 p-5 rounded-lg shadow-lg">
         <div className="bg-gradient-to-r from-blue-600 bg-purple-600 p-4 rounded-lg shadow">
           <h2 className="text-white text-lg font-semibold">{account.accountname}</h2>
           <p className="text-white">{account.accountid}</p>
@@ -176,22 +176,21 @@ if(!search) {
         <label className="block text-gray-600 mb-2">เลือกวันเดือนปีที่ต้องการ</label>
         <input
           type="date"
-          className="w-full p-2 border rounded"
+          className="w-full p-2 border rounded-md focus:ring-2 focus:ring-blue-400"
           onChange={(e) => handleDateChange(e, account.accountid)}
         />
           </div>
         <div className="mt-3 bg-white  rounded-lg h-80 overflow-y-auto shadow">
-        <div className="sticky top-0 z-10 bg-white p-4 shadow-md">
-            <div className="flex items-center justify-between w-full p-2 bg-gray-100 rounded-md">
+        <div className="sticky top-0 z-10 bg-white p-3 shadow-md">
+            <div className="flex items-center justify-between p-2 bg-gray-100 rounded-md">
 
-              <label className="text-sm">วัน-เวลา</label>
-
+              <label className="text-sm font-semibold">วัน-เวลา</label>
               <div className="flex items-center gap-2">
-              <span className="text-sm whitespace-nowrap">เงินเข้า/เงินออก </span>
-              <div className="flex items-center border border-gray-400 rounded-full px-2 py-1 w-[60px]">
+              <span className="text-sm font-semibold">เงินเข้า/เงินออก </span>
+              <div className="flex items-center border rounded-full px-2 py-1 w-[70px]">
 
               <svg 
-        className="w-3 h-3 text-gray-500 flex-shrink-0"
+        className="w-4 h-4 text-gray-500 flex-shrink-0"
         fill="none" stroke="currentColor" strokeWidth="2"
         viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
       >
@@ -200,7 +199,7 @@ if(!search) {
     <input
       type="text"
       placeholder="จำนวนเงิน"
-      className="w-full text-xs outline-none min-w-0 bg-transparent"
+      className="w-[40px] text-xs outline-none bg-transparent"
       onChange={(e) => handleSearch(e,account.accountid)}
     />
     
@@ -212,9 +211,9 @@ if(!search) {
             
             {filteredTransactions.length > 0 ? (
             filteredTransactions.map((transaction, i) => (
-              <div key={i} className="border-b">
+              <div key={i} className="border-b last:border-none">
                 <div
-                  className="flex justify-between py-2 cursor-pointer"
+                  className="flex justify-between py-2 px-3 cursor-pointer hover:bg-gray-100 transition-all"
                   onClick={() => toggleDetails(`${accIndex}-${i}`)}
                 >
                   <span>{transaction.timestamp}</span>
@@ -223,7 +222,7 @@ if(!search) {
                   </span>
                 </div>
                 {openDetails[`${accIndex}-${i}`] && (
-                  <div className="p-3 bg-gray-50 rounded">
+                  <div className="p-3 bg-gray-50 rounded transition-all animate-slide-down">
                     <p><strong>รายละเอียด:</strong> {transaction.logs_name || "ไม่มีข้อมูล"}</p>
                   </div>
                 )}
