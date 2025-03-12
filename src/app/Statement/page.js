@@ -34,6 +34,7 @@ export default function Statement(){
   }, []);
   const fetchTransaction = async (accountId) => {
     try {
+      setTransactions_logs({});
       const response = await fetch("http://localhost:8000/api/transaction/allTransaction_logs");
       if (!response.ok) throw new Error("Failed to fetch transactions");
       const data = await response.json();
