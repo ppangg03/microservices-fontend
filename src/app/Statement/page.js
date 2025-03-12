@@ -187,7 +187,7 @@ if(!search) {
               <span className="text-sm">วัน-เวลา</span>
               <div className="flex items-center gap-2 w-2/4">
               <span className="text-sm whitespace-nowrap">เงินเข้า/เงินออก </span>
-              <div className="relative w-28">
+              <div className="relative w-40">
     
     <input
       type="text"
